@@ -17,6 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Set up cargo cache
+        uses: Swatinem/rust-cache@v2
+
       - name: Install cargo-edit
         uses: baptiste0928/cargo-install@v3.3.2
         with:

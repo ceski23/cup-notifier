@@ -10,7 +10,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "cargo set-version ${nextRelease.version}"
+                "prepareCmd": "cargo set-version ${nextRelease.version} && cargo build --release"
             }
         ],
         [
