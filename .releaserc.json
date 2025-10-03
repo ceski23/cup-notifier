@@ -10,7 +10,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "cargo set-version ${nextRelease.version} && cargo build --release"
+                "prepareCmd": "cargo set-version ${nextRelease.version} && cargo build --release && cargo run --bin generate_schema"
             }
         ],
         [
@@ -24,6 +24,18 @@
                 ]
             }
         ],
-        "@semantic-release/github"
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    {
+                        "path": "schema.json"
+                    },
+                    {
+                        "path": "target/release/cup_notifier"
+                    }
+                ]
+            }
+        ]
     ]
 }
