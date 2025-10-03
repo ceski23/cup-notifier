@@ -1,4 +1,4 @@
-FROM clux/muslrust:1.89.0-nightly-2025-05-24 AS planner
+FROM clux/muslrust:1.89.0-nightly-2025-05-16 AS planner
 RUN cargo install cargo-chef
 
 WORKDIR /app
