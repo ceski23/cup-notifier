@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=./schema.json
+
+webhook_url: ""
+cup_base_url: ""
+cron: 0 * * * * *
