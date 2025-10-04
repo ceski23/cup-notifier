@@ -21,9 +21,10 @@ struct Args {
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<()> {
+    let args = Args::parse();
+
     setup::setup_logging()?;
 
-    let args = Args::parse();
     let config = setup::setup_config(&args.config).unwrap_or_else(|err| {
         error!("Failed to load config. Error: {err}");
         process::exit(1);
