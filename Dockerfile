@@ -13,5 +13,5 @@ COPY . .
 RUN cargo build --release --target ${TARGET}
 
 FROM gcr.io/distroless/cc
-COPY --from=builder /app/target/release/cup_notifier /cup_notifier
+COPY --from=builder /app/target/${TARGET}/release/cup_notifier /cup_notifier
 ENTRYPOINT ["/cup_notifier"]
