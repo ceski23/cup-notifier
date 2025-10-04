@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/ceski23/cup-notifier/compare/v1.2.2...v1.2.3) (2025-10-04)
+
+
+### Bug Fixes
+
+* hmm ([b1dc811](https://github.com/ceski23/cup-notifier/commit/b1dc8110a6e4fc767e442ce857144dd0358a4898))
+
 ## [1.2.2](https://github.com/ceski23/cup-notifier/compare/v1.2.1...v1.2.2) (2025-10-04)
 
 
