@@ -101,7 +101,7 @@ jobs:
           cache-to: type=gha,mode=max
           platforms: ${{ matrix.platform }}
           outputs: type=image,push-by-digest=true,name-canonical=true,push=true
-          build-args: TARGET=${{ matrix.platform }}
+          build-args: TARGET=${{ matrix.target }}
 
       - name: Export digest
         run: |
