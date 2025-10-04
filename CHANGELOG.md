@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/ceski23/cup-notifier/compare/v1.0.3...v1.0.4) (2025-10-04)
+
+
+### Bug Fixes
+
+* fix logging on help, build arm docker image, remove config from repo ([ab4b785](https://github.com/ceski23/cup-notifier/commit/ab4b785917dc49c05f9acbeaeab494127d2d9e75))
+
 ## [1.0.3](https://github.com/ceski23/cup-notifier/compare/v1.0.2...v1.0.3) (2025-10-03)
 
 
