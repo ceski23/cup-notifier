@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ceski23/cup-notifier/compare/v1.0.4...v1.1.0) (2025-10-04)
+
+
+### Features
+
+* build multiple archs ([9c62868](https://github.com/ceski23/cup-notifier/commit/9c628684be91b0171660af7c6b76e912089ac5a2))
+
 ## [1.0.4](https://github.com/ceski23/cup-notifier/compare/v1.0.3...v1.0.4) (2025-10-04)
 
 
