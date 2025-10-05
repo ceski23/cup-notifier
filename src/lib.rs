@@ -12,6 +12,6 @@ pub struct Config {
     pub cup_base_url: String,
 
     /// Cron pattern to use
-    #[serde_inline_default("0 0 0 * * *".to_string())]
+    #[serde_inline_default("0 0 * * *".to_string())]
     pub cron: String,
 }
