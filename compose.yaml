@@ -10,12 +10,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   cup-notifier:
-    image: ghcr.io/ceski23/cup-notifier:master
+    image: ghcr.io/ceski23/cup-notifier:latest
     container_name: cup-notifier
     restart: unless-stopped
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       - ./config.yaml:/config.yaml
-
-  whoami:
-    image: traefik/whoami:v1.10.2
