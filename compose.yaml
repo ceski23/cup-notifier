@@ -1,0 +1,21 @@
+services:
+  cup:
+    image: ghcr.io/sergi0g/cup:latest
+    container_name: cup
+    restart: unless-stopped
+    command: serve
+    ports:
+      - 8000:8000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  cup-notifier:
+    image: ghcr.io/ceski23/cup-notifier:master
+    container_name: cup-notifier
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config.yaml:/config.yaml
+
+  whoami:
+    image: traefik/whoami:v1.10.2

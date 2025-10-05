@@ -1,0 +1,30 @@
+{
+    "name": "Rust",
+    "image": "mcr.microsoft.com/devcontainers/rust:2.0.2-1",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2.12.4": {
+            "moby": false
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "search.exclude": {
+                    "**/target": true
+                },
+                "lldb.verboseLogging": true,
+                "files.readonlyInclude": {
+                    "**/.cargo/registry/src/**/*.rs": true,
+                    "**/lib/rustlib/src/rust/library/**/*.rs": true
+                },
+                "rust-analyzer.testExplorer": true,
+                "rust-analyzer.check.command": "clippy"
+            },
+            "extensions": [
+                "redhat.vscode-yaml",
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    },
+    "onCreateCommand": "rustup show active-toolchain"
+}

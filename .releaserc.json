@@ -1,0 +1,41 @@
+{
+    "repositoryUrl": "https://github.com/ceski23/cup-notifier.git",
+    "branches": [
+        "master"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "cargo set-version ${nextRelease.version} && cargo build --release && cargo run --bin generate_schema"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "message": "chore(release): ${nextRelease.version} [skip ci]",
+                "assets": [
+                    "CHANGELOG.md",
+                    "Cargo.toml",
+                    "Cargo.lock"
+                ]
+            }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    {
+                        "path": "schema.json"
+                    },
+                    {
+                        "path": "target/release/cup_notifier"
+                    }
+                ]
+            }
+        ]
+    ]
+}

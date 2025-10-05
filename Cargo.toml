@@ -1,0 +1,29 @@
+[package]
+name = "cup_notifier"
+version = "0.1.0"
+edition = "2024"
+authors = ["Cezary Bober <ceski23@gmail.com>"]
+
+[dependencies]
+anyhow = "1.0.100"
+clap = { version = "4.5.48", features = ["derive"] }
+figment = { version = "0.10.19", features = ["yaml", "env"] }
+figment_file_provider_adapter = "0.1.1"
+futures = "0.3.31"
+reqwest = { version = "0.12.23", features = ["json"] }
+schemars = "1.0.4"
+serde = { version = "1.0.228", features = ["derive"] }
+serde-inline-default = "1.0.0"
+serde_json = "1.0.145"
+tokio = { version = "1.47.1", features = ["rt", "macros"] }
+tokio-cron-scheduler = { version = "0.15.0", features = ["signal"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["json", "env-filter"] }
+# openssl = { version = "0.10.35", features = ["vendored"] }
+
+[profile.release]
+opt-level = "z"
+strip = "symbols"
+panic = "abort"
+lto = "fat"
+codegen-units = 1
